@@ -21,7 +21,7 @@ public class TestBanco {
 		if(f.exists()) {
 			try {
 			gerencia.carregar2(new Scanner(f));
-			}catch (FormatoIncorreto e) {
+			}catch (FormatoIncorretoException e) {
 				e.getMessage();
 			}catch (IOException e) {
 				e.printStackTrace();

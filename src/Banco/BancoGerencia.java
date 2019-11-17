@@ -102,13 +102,13 @@ public class BancoGerencia {
 			conta.salvar(ps);
 		}
 	}
-	public void carregar2(Scanner sc) throws FormatoIncorreto{
+	public void carregar2(Scanner sc) throws FormatoIncorretoException{
 		while(sc.hasNext()) {
 			inserir(carregar(sc));
 		}
 	}
 	
-	public Conta carregar(Scanner sc) throws FormatoIncorreto {
+	public Conta carregar(Scanner sc) throws FormatoIncorretoException {
 		String tipo = sc.nextLine();
 		int numero = Integer.parseInt(sc.nextLine());
 		String nome = sc.nextLine(); 
@@ -127,6 +127,6 @@ public class BancoGerencia {
 			
 			return cc;
 		}else
-			throw new FormatoIncorreto("Nao foi possivel carregar suas conta do BDDados");
+			throw new FormatoIncorretoException("Nao foi possivel carregar suas conta do BDDados");
 	}
 }
