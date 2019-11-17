@@ -7,8 +7,7 @@ import java.util.Scanner;
 
 public class Poupanca extends Conta {
 	private double taxaRendimento;
-	
-	
+
 	public Poupanca(int numero, String nomeTitular, double saldo, double taxaRendimento) {
 		super(numero, nomeTitular, saldo);
 		this.taxaRendimento = taxaRendimento;
@@ -43,19 +42,12 @@ public class Poupanca extends Conta {
 		saldo = saldo + (saldo * taxaRendimento);
 	}
 
-	public void salvar(PrintStream ps) throws IOException{
-		Scanner sc = new Scanner(System.in);
-		String arquivo;
-		
-		System.out.println("Digite o nome do seu arquivo sem espaço o character especial");
-		arquivo = sc.next();
-		
-		ps = new PrintStream(arquivo);
-
-		while (sc.hasNextLine()) {
-			ps.println("Poupanca [numero=" + super.numero + ", nomeTitular=" + super.nomeTitular + ", saldo=" + super.saldo + ", taxaRendimento=" +
-			taxaRendimento + "]");
-		}
+	public void salvar(PrintStream ps) throws IOException {
+		ps.println("CONTA POUPANCA");
+		ps.println( getNumero() );
+		ps.println( getNomeTitular() );
+		ps.println( getSaldo() );
+		ps.println( getTaxaRendimento() );
 	}
 
 	@Override

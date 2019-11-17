@@ -1,4 +1,5 @@
 package Banco;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -11,14 +12,25 @@ public class TestBanco {
 		AcaoCobraCesta acao = new AcaoCobraCesta();
 		
 		Conta p1 = new Poupanca(2777, "Renato", 1500, 0.15);
+		Conta c1 =  new Corrente(2152, "JOAO", 1500 , 100, 0);
 		
-		Scanner s = new Scanner(System.in);
-        PrintStream ps = new PrintStream("arquivo.txt");
-        while (s.hasNextLine()) {
-            ps.println(s.nextLine());
-        }
+		gerencia.inserir(p1);
+		gerencia.inserir(c1);
 		
-		p1.salvar(ps);
+		File f = new File("BDDados.txt");
+		if(f.exists()) {
+			try {
+			gerencia.carregar2(new Scanner(f));
+			}catch (FormatoIncorreto e) {
+				e.getMessage();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+        PrintStream ps = new PrintStream("BDDados.txt");
+		gerencia.salvar(ps);
 		
 		gerencia.exibir();
 		

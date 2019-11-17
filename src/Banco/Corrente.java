@@ -53,18 +53,13 @@ public class Corrente extends Conta {
 	}
 
 	public void salvar(PrintStream ps) throws IOException {
-		Scanner sc = new Scanner(System.in);
-		String arquivo;
+		ps.println("CONTA CORRENTE");
+		ps.println( getNumero() );
+		ps.println( getNomeTitular() );
+		ps.println( getSaldo() );
+		ps.println( + getLimite());
+		ps.println(  getTaxaJuros() );
 		
-		System.out.println("Digite o nome do seu arquivo sem espaço o character especial");
-		arquivo = sc.next();
-		
-		ps = new PrintStream(arquivo);
-
-		while (sc.hasNextLine()) {
-			ps.println("Corrente [numero=" + super.numero + ", nomeTitular=" + super.nomeTitular + ", saldo=" + super.saldo + ", limite=" +
-			limite + ", taxaJuros=" + taxaJuros + "]");
-		}
 	}
 
 	@Override
