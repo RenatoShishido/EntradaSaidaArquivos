@@ -4,7 +4,7 @@ import java.io.PrintStream;
 
 public class Gerente extends Pessoa{
 
-	public Gerente(String nome, int id) {
+	public Gerente(String nome, long id) {
 		super(nome, id);
 	}
 	
@@ -17,6 +17,8 @@ public class Gerente extends Pessoa{
 	public String toString() {
 		return "Gerente [nome=" + super.getNome() + ", id=" + super.getId() + "]";
 	}
+
+
 	
 	
 }

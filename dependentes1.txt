@@ -1,8 +1,9 @@
 Gerentes
-renato 5
-Funcionarios
-Joao 2 5
+renato 154
 Gerentes
-renato 5
+pedro 845
 Funcionarios
-Joao 2 5
+joao 845 135
+Funcionarios
+lucas 154 897
+

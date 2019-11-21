@@ -12,11 +12,13 @@ import java.util.Scanner;
 public class TestPessoa {
 	public static void main(String[] args) throws IOException {
 		Objetos ob = new Objetos();
-		Pessoa g1 = new Gerente("renato", 5),
-				f1 = new Funcionarios("Joao", 2, 5);
+		Pessoa g1 = new Gerente("renato", 154),
+				g2 = new Gerente("pedro", 845),
+				f1 = new Funcionarios("joao", 457, 845),
+				f2 = new Funcionarios("lucas", 483, 154);
 		
-		ob.inserir(g1);
-		ob.inserir(f1);
+		
+		
 		
 		Scanner sc = new Scanner(System.in);
 		File f = new File("dependentes1.txt");
@@ -30,7 +32,7 @@ public class TestPessoa {
 		//PrintStream ps = new PrintStream("dependentes1.txt");
 		//ob.salvar(ps);
 		
-		ob.exibir();
+		//ob.exibir();
 		
 		
 	}

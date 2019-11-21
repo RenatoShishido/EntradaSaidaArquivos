@@ -3,18 +3,18 @@ package input.Pessoas;
 import java.io.PrintStream;
 
 public class Funcionarios extends Pessoa {
-	private int correlacao;
+	private long correlacao;
 
-	public Funcionarios(String nome, int id, int correlacao) {
+	public Funcionarios(String nome, long id, long correlacao) {
 		super(nome, id);
 		this.correlacao = correlacao;
 	}
 
-	public int getCorrelacao() {
+	public long getCorrelacao() {
 		return correlacao;
 	}
 
-	public void setCorrelacao(int correlacao) {
+	public void setCorrelacao(long correlacao) {
 		this.correlacao = correlacao;
 	}
 
@@ -22,6 +22,7 @@ public class Funcionarios extends Pessoa {
 		ps.println("Funcionarios");
 		ps.println(getNome() + " " + getId() + " " + correlacao);
 	}
+	
 
 	@Override
 	public String toString() {
