@@ -4,7 +4,7 @@ import java.io.PrintStream;
 
 public class Gerente extends Pessoa{
 
-	public Gerente(String nome, long id) {
+	public Gerente(String nome, int id) {
 		super(nome, id);
 	}
 	

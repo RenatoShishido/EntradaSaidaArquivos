@@ -4,9 +4,9 @@ import java.io.PrintStream;
 
 public abstract class Pessoa {
 	private String nome;
-	private long id;
+	private int id;
 
-	public Pessoa(String nome, long id) {
+	public Pessoa(String nome, int id) {
 		this.nome = nome;
 		this.id = id;
 	}
@@ -19,11 +19,11 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public abstract void salvar(PrintStream ps);

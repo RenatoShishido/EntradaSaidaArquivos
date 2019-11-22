@@ -32,7 +32,7 @@ public class TestPessoa {
 		//PrintStream ps = new PrintStream("dependentes1.txt");
 		//ob.salvar(ps);
 		
-		//ob.exibir();
+		ob.exibir();
 		
 		
 	}
